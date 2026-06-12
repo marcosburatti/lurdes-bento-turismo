@@ -24,6 +24,24 @@
     gtag('config', 'AW-18128125077');
   </script>
 
+  <!-- Conversão Google Ads -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18128125077/g9INCL3Z5r0cEJX5lMRD',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -642,10 +660,10 @@
 <header id="header">
   <nav>
     <a href="#hero" class="nav-brand">
-      <img src="assets/logo.png" alt="Lurdes Bento – Guia & Motorista" class="nav-logo"/>
+      <img src="assets/logo.png" alt="Lurdes Bento – Motorista & Guia de Turismo" class="nav-logo"/>
       <span class="nav-brand-text">
         <span class="nb1">Lurdes Bento</span>
-        <span class="nb2">Guia & Motorista</span>
+        <span class="nb2">Motorista & Guia de Turismo</span>
       </span>
     </a>
     <ul class="nav-links">
@@ -653,7 +671,7 @@
       <li><a href="#passeios">Passeios</a></li>
       <li><a href="#regioes">Regiões</a></li>
       <li><a href="#diferenciais">Diferenciais</a></li>
-      <li><a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="nav-btn">📲 WhatsApp</a></li>
+      <li><a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="nav-btn" onclick="return gtag_report_conversion(this.href)">📲 WhatsApp</a></li>
     </ul>
     <button class="hamburger" id="ham" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -669,7 +687,7 @@
   <a href="#diferenciais" onclick="closeMob()">Diferenciais</a>
   <a href="#depoimentos"  onclick="closeMob()">Depoimentos</a>
   <a href="#contato"      onclick="closeMob()">Contato</a>
-  <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="mob-btn">📲 Falar no WhatsApp</a>
+  <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="mob-btn" onclick="return gtag_report_conversion(this.href)">📲 Falar no WhatsApp</a>
 </div>
 
 <!-- ── HERO ── -->
@@ -681,7 +699,7 @@
       <h1>Explore a Tríplice<br/>Fronteira com<br/><em>conforto & experiência</em></h1>
       <p>Mais de 10 anos realizando passeios inesquecíveis em Foz do Iguaçu, Argentina e Paraguai. Atendimento personalizado, seguro e inesquecível.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="btn-gold">
+        <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="btn-gold" onclick="return gtag_report_conversion(this.href)">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Falar no WhatsApp
         </a>
@@ -727,7 +745,7 @@
       </div>
       <div class="about-content" data-aos="fade-left" data-aos-delay="100">
         <div class="sec-label">Quem sou eu</div>
-        <h2 class="sec-title">Lurdes Bento —<br/><span>Guia & Motorista</span></h2>
+        <h2 class="sec-title">Lurdes Bento —<br/><span>Motorista & Guia de Turismo</span></h2>
         <p>Especialista em turismo receptivo na Tríplice Fronteira, ofereço atendimento personalizado, conforto e segurança para transformar sua viagem em uma experiência verdadeiramente inesquecível.</p>
         <p>Com profundo conhecimento local, apresento cada destino com paixão e dedicação — das majestosas Cataratas do Iguaçu à vibrante Ciudad del Este, passando pelo encantador Puerto Iguazú argentino.</p>
 
@@ -761,7 +779,7 @@
             </div>
           </div>
         </div>
-        <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="btn-gold">
+        <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="btn-gold" onclick="return gtag_report_conversion(this.href)">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Agendar passeio
         </a>
@@ -791,7 +809,7 @@
         <div class="tour-body">
           <h3>Cataratas do Iguaçu</h3>
           <p>Uma das 7 Maravilhas da Natureza. Trilhas, passarelas e a emoção da Garganta do Diabo. Uma experiência que muda perspectivas.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Cataratas%20do%20Iguaçu." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Cataratas%20do%20Iguaçu." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -805,7 +823,7 @@
         <div class="tour-body">
           <h3>Itaipu Binacional</h3>
           <p>A maior usina hidrelétrica operacional do mundo. Tour panorâmico ou interno da gigante do Paraná na fronteira Brasil-Paraguai.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Itaipu%20Binacional." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Itaipu%20Binacional." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -819,7 +837,7 @@
         <div class="tour-body">
           <h3>Marco das Três Fronteiras</h3>
           <p>O ponto onde Brasil, Argentina e Paraguai se encontram. Um símbolo único de integração cultural e histórica na América do Sul.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Marco%20das%20Três%20Fronteiras." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Marco%20das%20Três%20Fronteiras." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -833,7 +851,7 @@
         <div class="tour-body">
           <h3>Compras no Paraguai</h3>
           <p>Ciudad del Este — paraíso das compras na América do Sul. Eletrônicos, perfumes, roupas e muito mais com preços imperdíveis.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Paraguai%20Ciudad%20del%20Este." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Paraguai%20Ciudad%20del%20Este." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -847,7 +865,7 @@
         <div class="tour-body">
           <h3>Parque das Aves</h3>
           <p>Um santuário de aves exóticas com mais de 1.400 aves de 140 espécies. Arara-azul, tucanos e araras em liberdade — experiência única.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Parque%20das%20Aves." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20passeio%20Parque%20das%20Aves." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -861,7 +879,7 @@
         <div class="tour-body">
           <h3>Passeios na Argentina</h3>
           <p>Cataratas lado argentino, Puerto Iguazú, Duty Free e muito mais. Explore a beleza argentina com conforto e segurança total.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20os%20passeios%20na%20Argentina." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20os%20passeios%20na%20Argentina." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -875,7 +893,7 @@
         <div class="tour-body">
           <h3>City Tour Foz do Iguaçu</h3>
           <p>Conheça os pontos turísticos, culturais e gastronômicos de Foz do Iguaçu. Praça da Paz, Mesquita, Templo Budista e muito mais.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20City%20Tour%20de%20Foz%20do%20Iguaçu." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20saber%20mais%20sobre%20o%20City%20Tour%20de%20Foz%20do%20Iguaçu." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -888,7 +906,7 @@
         <div class="tour-body">
           <h3>Passeio Personalizado</h3>
           <p>Monte o roteiro dos seus sonhos! Combinamos destinos, horários e experiências para criar um passeio 100% sob medida para você.</p>
-          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20criar%20um%20passeio%20personalizado." target="_blank" class="tour-btn">Solicitar passeio →</a>
+          <a href="https://wa.me/5545991431849?text=Olá%20Lurdes!%20Quero%20criar%20um%20passeio%20personalizado." target="_blank" class="tour-btn" onclick="return gtag_report_conversion(this.href)">Solicitar passeio →</a>
         </div>
       </div>
 
@@ -1073,7 +1091,7 @@
         <p class="sec-desc white" style="margin-bottom:32px">Entre em contato via WhatsApp para um atendimento rápido, personalizado e sem compromisso. Estou aqui para tornar sua viagem inesquecível!</p>
 
         <div class="contact-cards">
-          <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="cc">
+          <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="cc" onclick="return gtag_report_conversion(this.href)">
             <div class="cc-icon wa">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </div>
@@ -1178,7 +1196,7 @@
       </div>
       <div>
         <div class="footer-socials">
-          <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" title="WhatsApp">
+          <a href="https://wa.me/5545991431849" target="_blank" rel="noopener" title="WhatsApp" onclick="return gtag_report_conversion(this.href)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
           <a href="https://www.instagram.com/receptivo_lurdesbento/" target="_blank" rel="noopener" title="Instagram">
@@ -1194,7 +1212,7 @@
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="wa-float" title="Falar no WhatsApp">
+<a href="https://wa.me/5545991431849" target="_blank" rel="noopener" class="wa-float" onclick="return gtag_report_conversion(this.href)" title="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
@@ -1233,7 +1251,8 @@
     const tour    = document.querySelector('select').value || 'Passeio a definir';
     const msg     = document.querySelector('textarea').value || '';
     const text    = `Olá Lurdes! Meu nome é ${name}. Tenho interesse no passeio: ${tour}. ${msg ? 'Obs: ' + msg : ''}`;
-    window.open(`https://wa.me/5545991431849?text=${encodeURIComponent(text)}`, '_blank');
+    const url     = `https://wa.me/5545991431849?text=${encodeURIComponent(text)}`;
+    gtag_report_conversion(url);
   }
 
   // Image fallback: if img fails to load, show gradient div
