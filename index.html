@@ -452,24 +452,37 @@
 
     /* ── DEPOIMENTOS ── */
     .dep-wrap { margin-top: 52px; }
-    .dep-slider { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .dep-carousel { overflow: hidden; border-radius: 20px; }
+    .dep-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); }
     .dep-card {
-      background: white; border-radius: 20px; padding: 30px;
-      box-shadow: var(--sh); border: 1px solid rgba(0,0,0,.05);
-      transition: transform .25s, box-shadow .25s;
+      min-width: 100%; background: white; border-radius: 20px; padding: 40px;
+      box-shadow: var(--sh); border: 1px solid rgba(0,0,0,.05); box-sizing: border-box;
     }
-    .dep-card:hover { transform: translateY(-4px); box-shadow: var(--sh-lg); }
-    .dep-stars { color: var(--gold); font-size: 16px; letter-spacing: 2px; margin-bottom: 16px; }
-    .dep-card p { font-size: 15px; color: var(--gray); line-height: 1.75; font-style: italic; margin-bottom: 22px; }
+    .dep-stars { color: var(--gold); font-size: 20px; letter-spacing: 3px; margin-bottom: 20px; }
+    .dep-card p { font-size: 16px; color: var(--gray); line-height: 1.8; font-style: italic; margin-bottom: 28px; }
     .dep-author { display: flex; align-items: center; gap: 12px; }
     .dep-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
+      width: 48px; height: 48px; border-radius: 50%;
       background: linear-gradient(135deg, var(--navy), var(--blue));
       display: flex; align-items: center; justify-content: center;
-      color: white; font-weight: 700; font-size: 16px; flex-shrink: 0;
+      color: white; font-weight: 700; font-size: 18px; flex-shrink: 0;
     }
     .dep-name { font-size: 14px; font-weight: 700; color: var(--text); }
     .dep-city { font-size: 12px; color: var(--gray); }
+    .dep-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 28px; }
+    .dep-btn {
+      width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--gold);
+      background: transparent; color: var(--gold); font-size: 18px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, color .2s;
+    }
+    .dep-btn:hover { background: var(--gold); color: #fff; }
+    .dep-dots { display: flex; gap: 8px; }
+    .dep-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,.2);
+      cursor: pointer; transition: background .2s, transform .2s;
+    }
+    .dep-dot.active { background: var(--gold); transform: scale(1.3); }
 
     /* ── INSTAGRAM ── */
     #instagram { background: var(--cream); }
@@ -1011,6 +1024,72 @@
   </div>
 </section>
 
+<!-- ── DEPOIMENTOS ── -->
+<section id="depoimentos" class="sec sec-cream">
+  <div class="container">
+    <div data-aos="fade-up">
+      <div class="sec-label">O que dizem</div>
+      <h2 class="sec-title">Turistas <span>satisfeitos</span></h2>
+      <p class="sec-desc">Avaliações reais do Google — <strong>5,0 ★ com mais de 40 avaliações</strong>.</p>
+    </div>
+    <div class="dep-wrap" data-aos="fade-up" data-aos-delay="100">
+      <div class="dep-carousel">
+        <div class="dep-track">
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <p>"Tivemos uma experiência excepcional com a LB Turismo nos passeios para a Argentina e o Paraguai! Foram extremamente atenciosos, prestativos e cuidadosos com a gente. Nos mostraram os melhores lugares e fizeram toda a diferença para aproveitarmos cada passeio ao máximo. Superaram nossas expectativas e tornaram nossa viagem ainda mais inesquecível. Recomendamos de olhos fechados!"</p>
+            <div class="dep-author">
+              <div class="dep-avatar">J</div>
+              <div>
+                <div class="dep-name">João Paulo Rodrigues de Alcântara</div>
+                <div class="dep-city">Google Meu Negócio</div>
+              </div>
+            </div>
+          </div>
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <p>"Eu sou uma mulher que preza bastante pela confiança e Lurdes conquistou a minha desde o primeiro contato. Ela guiou a gente em todos os passeios no Brasil, Paraguai e Argentina. Fiquei encantada e emocionada em ver a paixão e carinho pelo que fazem. Dionei e Rose também foram super atenciosos e me senti muito acolhida. Super recomendo os serviços dessa família maravilhosa! Voltarei a Foz sempre que possível. 💕"</p>
+            <div class="dep-author">
+              <div class="dep-avatar">A</div>
+              <div>
+                <div class="dep-name">Alba Oliveira</div>
+                <div class="dep-city">Google Meu Negócio</div>
+              </div>
+            </div>
+          </div>
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <p>"Empresa de confiança, são super gentis e pontuais! Confio de olhos fechados!!"</p>
+            <div class="dep-author">
+              <div class="dep-avatar">A</div>
+              <div>
+                <div class="dep-name">Ana Caroline da Rosa de Queiroz</div>
+                <div class="dep-city">Google Meu Negócio</div>
+              </div>
+            </div>
+          </div>
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <p>"Excepcional, indico demais!"</p>
+            <div class="dep-author">
+              <div class="dep-avatar">H</div>
+              <div>
+                <div class="dep-name">Helo Foto</div>
+                <div class="dep-city">Google Meu Negócio</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-controls">
+        <button class="dep-btn" id="depPrev" aria-label="Anterior">&#8592;</button>
+        <div class="dep-dots" id="depDots"></div>
+        <button class="dep-btn" id="depNext" aria-label="Próximo">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── DIFERENCIAIS ── -->
 <section id="diferenciais" class="sec sec-dark">
   <div class="container">
@@ -1049,65 +1128,6 @@
         <div class="diff-icon">🌟</div>
         <h3>Experiência Premium</h3>
         <p>Do traslado ao passeio, tudo organizado com excelência para que você relaxe e aproveite cada momento.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── DEPOIMENTOS ── -->
-<section id="depoimentos" class="sec sec-cream">
-  <div class="container">
-    <div data-aos="fade-up">
-      <div class="sec-label">O que dizem</div>
-      <h2 class="sec-title">Turistas <span>satisfeitos</span></h2>
-      <p class="sec-desc">Avaliações reais do Google — <strong>5,0 ★ com mais de 40 avaliações</strong>.</p>
-    </div>
-    <div class="dep-wrap">
-      <div class="dep-slider">
-        <div class="dep-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="dep-stars">★★★★★</div>
-          <p>"Tivemos uma experiência excepcional com a LB Turismo nos passeios para a Argentina e o Paraguai! Foram extremamente atenciosos, prestativos e cuidadosos com a gente. Nos mostraram os melhores lugares e fizeram toda a diferença para aproveitarmos cada passeio ao máximo. Superaram nossas expectativas e tornaram nossa viagem ainda mais inesquecível. Recomendamos de olhos fechados!"</p>
-          <div class="dep-author">
-            <div class="dep-avatar">J</div>
-            <div>
-              <div class="dep-name">João Paulo Rodrigues de Alcântara</div>
-              <div class="dep-city">Google Meu Negócio</div>
-            </div>
-          </div>
-        </div>
-        <div class="dep-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="dep-stars">★★★★★</div>
-          <p>"Eu sou uma mulher que preza bastante pela confiança e Lurdes conquistou a minha desde o primeiro contato. Ela guiou a gente em todos os passeios no Brasil, Paraguai e Argentina. Fiquei encantada e emocionada em ver a paixão e carinho pelo que fazem. Dionei e Rose também foram super atenciosos e me senti muito acolhida. Super recomendo os serviços dessa família maravilhosa! Voltarei a Foz sempre que possível. 💕"</p>
-          <div class="dep-author">
-            <div class="dep-avatar">A</div>
-            <div>
-              <div class="dep-name">Alba Oliveira</div>
-              <div class="dep-city">Google Meu Negócio</div>
-            </div>
-          </div>
-        </div>
-        <div class="dep-card" data-aos="fade-up" data-aos-delay="150">
-          <div class="dep-stars">★★★★★</div>
-          <p>"Empresa de confiança, são super gentis e pontuais! Confio de olhos fechados!!"</p>
-          <div class="dep-author">
-            <div class="dep-avatar">A</div>
-            <div>
-              <div class="dep-name">Ana Caroline da Rosa de Queiroz</div>
-              <div class="dep-city">Google Meu Negócio</div>
-            </div>
-          </div>
-        </div>
-        <div class="dep-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="dep-stars">★★★★★</div>
-          <p>"Excepcional, indico demais!"</p>
-          <div class="dep-author">
-            <div class="dep-avatar">H</div>
-            <div>
-              <div class="dep-name">Helo Foto</div>
-              <div class="dep-city">Google Meu Negócio</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1322,6 +1342,33 @@
       if (fb) fb.style.display = 'flex';
     });
   });
+</script>
+<script>
+  // Carousel de depoimentos
+  (function() {
+    const track = document.querySelector('.dep-track');
+    const dotsWrap = document.getElementById('depDots');
+    if (!track) return;
+    const cards = track.querySelectorAll('.dep-card');
+    let current = 0;
+    // criar dots
+    cards.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dep-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+    function goTo(n) {
+      current = (n + cards.length) % cards.length;
+      track.style.transform = 'translateX(-' + current * 100 + '%)';
+      dotsWrap.querySelectorAll('.dep-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === current));
+    }
+    document.getElementById('depPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('depNext').addEventListener('click', () => goTo(current + 1));
+    // auto-play a cada 6s
+    setInterval(() => goTo(current + 1), 6000);
+  })();
 </script>
 </body>
 </html>
